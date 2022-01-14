@@ -1,0 +1,19 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title %}Hello Symfony{% endblock %}
+
+{% block content %}
+    <h1>Hello {{ player0 }}!</h1>
+
+    <h2>La liste des joueurs du tableau</h2>
+
+    {% if tab_players|length == 0 %}
+        <p>Aucun élément dans le tableau</p>
+    {% else %}
+        <ul>
+            {% for player in tab_players %}
+                <li>{{ player }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
